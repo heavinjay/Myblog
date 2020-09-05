@@ -1,0 +1,67 @@
+2020-08-13 22:19:59,881 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-14 21:34:03,692 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-14 21:34:48,369 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-14 21:45:23,522 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-14 21:46:29,876 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-14 21:46:59,860 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-08-17 22:22:36,561 INFO: Microblog startup [in C:\Users\heavi\PycharmProjects\Microblog\blog\__init__.py:43]
+2020-09-04 21:36:19,872 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:45]
+2020-09-04 22:15:05,604 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:45]
+2020-09-04 22:15:21,047 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:45]
+2020-09-04 22:15:49,801 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:45]
+2020-09-04 22:41:26,639 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:44]
+2020-09-04 23:39:42,875 INFO: Myblog startup [in C:\Users\heavi\PycharmProjects\Myblog\blog\__init__.py:45]
+2020-09-04 23:40:12,422 ERROR: Exception on /reset_password_request [POST] [in C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 856, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 604, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 444, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\heavi\PycharmProjects\Myblog\blog\routes.py", line 191, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\heavi\PycharmProjects\Myblog\blog\email.py", line 19, in send_password_reset_email
+    send_email('[Myblog] Reset Your Password',
+  File "C:\Users\heavi\PycharmProjects\Myblog\blog\email.py", line 15, in send_email
+    mail.send(msg)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\heavi\PycharmProjects\Myblog\venv\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 988, in quit
+    res = self.docmd("quit")
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 424, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 371, in putcmd
+    self.send(str)
+  File "C:\Users\heavi\AppData\Local\Programs\Python\Python38-32\lib\smtplib.py", line 363, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
